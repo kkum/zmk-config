@@ -101,10 +101,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W            &kp E                &kp R                       &kp T        &kp C_MUTE  &kp C_PP  &kp Y        &kp U                  &kp I                 &kp O             &kp P     &kp BSPC
-&kp LCTRL  &kp A  &hrl LEFT_GUI S  &hrl LEFT_CONTROL D  &hrl LEFT_ALT F             &kp G        &kp LALT    &kp RALT  &kp H        &hrr RIGHT_ALT J       &hrr RIGHT_CONTROL K  &hrr RIGHT_GUI L  &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X            &kp C                &kp V                       &kp B                              &kp N        &kp M                  &kp COMMA             &kp DOT           &kp FSLH  &kp ESC
-                                   &mo 1                &hrsl LEFT_SHIFT BACKSPACE  &lt 3 SPACE                        &lt 3 SPACE  &hrsr RIGHT_ALT ENTER  &mo 2
+&none  &kp Q  &kp W            &kp E                &kp R                       &kp T        &none  &none  &kp Y        &kp U                  &kp I                 &kp O             &kp P     &none
+&none  &kp A  &hrl LEFT_GUI S  &hrl LEFT_CONTROL D  &hrl LEFT_ALT F             &kp G        &none  &none  &kp H        &hrr RIGHT_ALT J       &hrr RIGHT_CONTROL K  &hrr RIGHT_GUI L  &kp SEMI  &none
+&none  &kp Z  &kp X            &kp C                &kp V                       &kp B                      &kp N        &kp M                  &kp COMMA             &kp DOT           &kp FSLH  &none
+                               &mo 1                &hrsl LEFT_SHIFT BACKSPACE  &lt 3 SPACE                &lt 3 SPACE  &hrsr RIGHT_ALT ENTER  &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
@@ -144,13 +144,13 @@
             >;
         };
 
-        extra_layer_1 {
+        nav {
             display-name = "EXTRA 1";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
+&trans  &kp TAB            &kp HOME    &kp UP           &kp END      &kp PAGE_UP    &trans  &trans  &kp KP_DIVIDE  &kp KP_NUMBER_7  &kp KP_N8  &kp KP_N9        &trans      &trans
+&trans  &kp CAPS           &kp LEFT    &kp DOWN         &kp RIGHT    &kp PAGE_DOWN  &trans  &trans  &kp KP_MINUS   &kp KP_N4        &kp KP_N5  &kp KP_NUMBER_6  &kp KP_N0   &trans
+&trans  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &kp LS(TAB)  &trans                         &kp KP_COMMA   &kp KP_N1        &kp KP_N2  &kp KP_N3        &kp KP_DOT  &trans
+                                       &trans           &kp DELETE   &trans                         &trans         &kp ESCAPE       &kp KP_N0
             >;
         };
 
