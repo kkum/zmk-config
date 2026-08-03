@@ -74,6 +74,18 @@
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 34 35 36 37 38 39 43 44 45>;
             flavor = "tap-preferred";
         };
+
+        nav: nav {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NAV";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <0 1 2 4 5 6 14 15 16 17 18 19 20 28 29 30 31 32 33 41 44 8 9 10 11 12 13 22 23 24 25 26 27 34 35 36 37 38 39 44 7 21 3>;
+            hold-trigger-on-release;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -89,10 +101,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T      &kp C_MUTE  &kp C_PP  &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G      &kp LALT    &kp RALT  &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B                            &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &kp SPACE                        &kp RET  &mo 2  &kp RALT
+&kp TAB    &kp Q  &kp W            &kp E                &kp R                       &kp T        &kp C_MUTE  &kp C_PP  &kp Y        &kp U                  &kp I                 &kp O             &kp P     &kp BSPC
+&kp LCTRL  &kp A  &hrl LEFT_GUI S  &hrl LEFT_CONTROL D  &hrl LEFT_ALT F             &kp G        &kp LALT    &kp RALT  &kp H        &hrr RIGHT_ALT J       &hrr RIGHT_CONTROL K  &hrr RIGHT_GUI L  &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X            &kp C                &kp V                       &kp B                              &kp N        &kp M                  &kp COMMA             &kp DOT           &kp FSLH  &kp ESC
+                                   &mo 1                &hrsl LEFT_SHIFT BACKSPACE  &lt 3 SPACE                        &lt 3 SPACE  &hrsr RIGHT_ALT ENTER  &mo 2
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_VOL_DN C_VOL_UP>;
